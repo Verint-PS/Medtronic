@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PropertyDefinitions>
+	<Group name="medtronic" displayName="medtronic">
+			<Property name="nssm.home">
+                <Description>nssm home used for installing windows services</Description>
+            </Property>
+
+	</Group>
+</PropertyDefinitions>
