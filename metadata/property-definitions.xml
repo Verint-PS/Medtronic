@@ -4,6 +4,11 @@
 			<Property name="nssm.home">
                 <Description>nssm home used for installing windows services</Description>
             </Property>
-
+			<Property name="jasper-server-hosts">
+                <Description>List of jasper server hosts which is used in the webclient response headers</Description>
+            </Property>
+			<Property name="web-server-hosts">
+                <Description>List of web server hosts which is used in the webclient response headers</Description>
+            </Property>
 	</Group>
 </PropertyDefinitions>
