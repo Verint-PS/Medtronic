@@ -85,7 +85,7 @@
                 </MimeType>
                 <MimeType typeExtension="pdf">
                     <HttpHeader name="Content-type" value="application/pdf" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="rtf">
                     <HttpHeader name="Content-type" value="text/rtf" />
@@ -101,11 +101,11 @@
                 </MimeType>
                 <MimeType typeExtension="txt">
                     <HttpHeader name="Content-type" value="text/plain" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="html">
                     <HttpHeader name="Content-type" value="text/html" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="mp4">
                     <HttpHeader name="Content-type" value="video/mp4" />
@@ -129,35 +129,35 @@
                 </MimeType>
                 <MimeType typeExtension="jpg">
                     <HttpHeader name="Content-type" value="image/jpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="jpeg">
                     <HttpHeader name="Content-type" value="image/jpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="png">
                     <HttpHeader name="Content-type" value="image/png" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="gif">
                     <HttpHeader name="Content-type" value="image/gif" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="bmp">
                     <HttpHeader name="Content-type" value="image/bmp" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="tiff">
                     <HttpHeader name="Content-type" value="image/tiff" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="tif">
                     <HttpHeader name="Content-type" value="image/tiff" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="jfif">
                     <HttpHeader name="Content-type" value="image/pjpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
             </MimeHeaders>
             <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
@@ -249,7 +249,7 @@
                 </MimeType>
                 <MimeType typeExtension="pdf">
                     <HttpHeader name="Content-type" value="application/pdf" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="rtf">
                     <HttpHeader name="Content-type" value="text/rtf" />
@@ -261,11 +261,11 @@
                 </MimeType>
                 <MimeType typeExtension="txt">
                     <HttpHeader name="Content-type" value="text/plain" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="html">
                     <HttpHeader name="Content-type" value="text/html" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="mp4">
                     <HttpHeader name="Content-type" value="video/mp4" />
@@ -289,35 +289,35 @@
                 </MimeType>
                 <MimeType typeExtension="jpg">
                     <HttpHeader name="Content-type" value="image/jpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="jpeg">
                     <HttpHeader name="Content-type" value="image/jpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="png">
                     <HttpHeader name="Content-type" value="image/png" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="gif">
                     <HttpHeader name="Content-type" value="image/gif" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="bmp">
                     <HttpHeader name="Content-type" value="image/bmp" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="tiff">
                     <HttpHeader name="Content-type" value="image/tiff" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="tif">
                     <HttpHeader name="Content-type" value="image/tiff" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
                 <MimeType typeExtension="jfif">
                     <HttpHeader name="Content-type" value="image/pjpeg" />
-                    <HttpHeader name="Content-disposition" value="inline" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
             </MimeHeaders>
             <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
