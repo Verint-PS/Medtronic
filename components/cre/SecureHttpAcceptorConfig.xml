@@ -5,6 +5,7 @@
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
+		<IdentityRetriever classname="com.gtnet.httpClient.security.oauth.OIDCIdentityRetriever"/>
 
         <RequestURIConfig requestURI="/GTConnect/UnifiedAcceptor">
             <Matching>
