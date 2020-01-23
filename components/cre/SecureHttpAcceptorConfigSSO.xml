@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SecurityConfigs>
+    <SecurityConfig name="BuiltInAuth" loginType="FORM">
+		<SecuredProcesses processesList="MedtronicDesktop.Main,GT.Runtime.Scripts.ProcessRunner.Main"/>
+
+		<IdentityRetriever classname="com.gtnet.httpClient.security.oauth.OIDCIdentityRetriever"/>
+
+        <RequestURIConfig requestURI="/GTConnect/UnifiedAcceptor">
+            <Matching>
+                <Parameter name="gtxInitialProcess" value="FrameworkDesktop.JAWSMain"/>
+                <LoginPage uri="GT_WEBLoginPage_Accessible.jsp" />
+                <ErrorPage uri="GT_WEBGeneralErrorPage_Accessible.jsp" />
+                <LoginErrorPages>
+                    <LoginErrorPage uri="GT_WEBUnauthorisedPage_Accessible.jsp" code="-1" />
+                </LoginErrorPages>
+            </Matching>
+            <LoginPage uri="GT_WEBLoginPage.jsp" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.jsp" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.jsp" code="-1" />
+            </LoginErrorPages>
+        </RequestURIConfig>
+
+        <RequestURIConfig requestURI="/GTConnect/SecureHttpAcceptor">
+            <LoginPage uri="GT_WEBLoginPage.jsp" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.jsp" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.jsp" code="-1" />
+            </LoginErrorPages>
+        </RequestURIConfig>
+
+        <RequestURIConfig requestURI="/GTConnect/SingleSignOn">
+            <LoginPage uri="GT_WEBSingleSignOnLoginPage.htm" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.htm" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.htm" code="-1" />
+            </LoginErrorPages>
+            <SingleSignOn>
+                <LoggedInPage uri="GT_WEBSingleSignOnLoggedInPage.htm" />
+            </SingleSignOn>
+        </RequestURIConfig>
+
+        <SecureDownloadConfig sessionSecured="false" resourceServerHostURL="file:C:/Test/">
+            <MimeHeaders>
+                <MimeType typeExtension="docx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="xlsx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="pptx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="doc">
+                    <HttpHeader name="Content-type" value="application/msword" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="xls">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-excel" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="ppt">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-powerpoint" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="vsd">
+                    <HttpHeader name="Content-type" value="application/vnd.visio" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="odt">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.text" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="ods">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.spreadsheet" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="odp">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.presentation" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="pdf">
+                    <HttpHeader name="Content-type" value="application/pdf" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="rtf">
+                    <HttpHeader name="Content-type" value="text/rtf" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+				<MimeType typeExtension="xps">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-xpsdocument" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="csv">
+                    <HttpHeader name="Content-type" value="text/csv" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="txt">
+                    <HttpHeader name="Content-type" value="text/plain" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="html">
+                    <HttpHeader name="Content-type" value="text/html" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mp4">
+                    <HttpHeader name="Content-type" value="video/mp4" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mpeg">
+                    <HttpHeader name="Content-type" value="video/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mpg">
+                    <HttpHeader name="Content-type" value="video/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mp3">
+                    <HttpHeader name="Content-type" value="audio/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="wav">
+                    <HttpHeader name="Content-type" value="audio/x-wav" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jpg">
+                    <HttpHeader name="Content-type" value="image/jpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jpeg">
+                    <HttpHeader name="Content-type" value="image/jpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="png">
+                    <HttpHeader name="Content-type" value="image/png" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="gif">
+                    <HttpHeader name="Content-type" value="image/gif" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="bmp">
+                    <HttpHeader name="Content-type" value="image/bmp" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="tiff">
+                    <HttpHeader name="Content-type" value="image/tiff" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="tif">
+                    <HttpHeader name="Content-type" value="image/tiff" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jfif">
+                    <HttpHeader name="Content-type" value="image/pjpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+            </MimeHeaders>
+            <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
+        </SecureDownloadConfig>
+    </SecurityConfig>
+    <SecurityConfig name="SAMLSSO" loginType="EXTERNAL">
+        <SecuredProcesses processesList="FrameworkDesktop.Main"/>
+
+        <SecurityProvider classname="com.gtnet.common.security.DummySecurityStore"/>
+        
+        <IdentityRetriever classname="com.gtnet.httpClient.security.SamlUserIdentityRetriever"/>
+        
+        <RequestURIConfig requestURI="/GTConnect/UnifiedAcceptor">
+            <Matching>
+                <Parameter name="gtxInitialProcess" value="FrameworkDesktop.JAWSMain"/>
+                <LoginPage uri="GT_WEBLoginPage_Accessible.jsp" />
+                <ErrorPage uri="GT_WEBGeneralErrorPage_Accessible.jsp" />
+                <LoginErrorPages>
+                    <LoginErrorPage uri="GT_WEBUnauthorisedPage_Accessible.jsp" code="-1" />
+                </LoginErrorPages>
+            </Matching>
+            <LoginPage uri="GT_WEBLoginPage.jsp" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.jsp" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.jsp" code="-1" />
+            </LoginErrorPages>
+        </RequestURIConfig>
+
+        <RequestURIConfig requestURI="/GTConnect/SecureHttpAcceptor">
+            <LoginPage uri="GT_WEBLoginPage.jsp" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.jsp" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.jsp" code="-1" />
+            </LoginErrorPages>
+        </RequestURIConfig>
+
+        <RequestURIConfig requestURI="/GTConnect/SingleSignOn">
+            <LoginPage uri="GT_WEBSingleSignOnLoginPage.htm" />
+            <ErrorPage uri="GT_WEBGeneralErrorPage.htm" />
+            <LoginErrorPages>
+                <LoginErrorPage uri="GT_WEBUnauthorisedPage.htm" code="-1" />
+            </LoginErrorPages>
+            <SingleSignOn>
+                <LoggedInPage uri="GT_WEBSingleSignOnLoggedInPage.htm" />
+            </SingleSignOn>
+        </RequestURIConfig>
+
+        <SecureDownloadConfig sessionSecured="false" resourceServerHostURL="file:C:/Test/">
+            <MimeHeaders>
+                <MimeType typeExtension="docx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="xlsx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="pptx">
+                    <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="doc">
+                    <HttpHeader name="Content-type" value="application/msword" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="xls">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-excel" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="ppt">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-powerpoint" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="vsd">
+                    <HttpHeader name="Content-type" value="application/vnd.visio" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="odt">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.text" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="ods">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.spreadsheet" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="odp">
+                    <HttpHeader name="Content-type" value="application/vnd.oasis.opendocument.presentation" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="pdf">
+                    <HttpHeader name="Content-type" value="application/pdf" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="rtf">
+                    <HttpHeader name="Content-type" value="text/rtf" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="csv">
+                    <HttpHeader name="Content-type" value="text/csv" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="txt">
+                    <HttpHeader name="Content-type" value="text/plain" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="html">
+                    <HttpHeader name="Content-type" value="text/html" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mp4">
+                    <HttpHeader name="Content-type" value="video/mp4" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mpeg">
+                    <HttpHeader name="Content-type" value="video/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mpg">
+                    <HttpHeader name="Content-type" value="video/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="mp3">
+                    <HttpHeader name="Content-type" value="audio/mpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="wav">
+                    <HttpHeader name="Content-type" value="audio/x-wav" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jpg">
+                    <HttpHeader name="Content-type" value="image/jpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jpeg">
+                    <HttpHeader name="Content-type" value="image/jpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="png">
+                    <HttpHeader name="Content-type" value="image/png" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="gif">
+                    <HttpHeader name="Content-type" value="image/gif" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="bmp">
+                    <HttpHeader name="Content-type" value="image/bmp" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="tiff">
+                    <HttpHeader name="Content-type" value="image/tiff" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="tif">
+                    <HttpHeader name="Content-type" value="image/tiff" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+                <MimeType typeExtension="jfif">
+                    <HttpHeader name="Content-type" value="image/pjpeg" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+            </MimeHeaders>
+            <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
+        </SecureDownloadConfig>
+    </SecurityConfig>
+</SecurityConfigs>

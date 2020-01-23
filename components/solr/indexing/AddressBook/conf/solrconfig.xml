@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<config>
+  <requestDispatcher handleSelect="true" />
+  
+  <!-- autosuggest component -->
+  <searchComponent name="autosuggest" class="solr.SpellCheckComponent">
+    <lst name="spellchecker">
+      <str name="name">AD_en</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.AnalyzingInfixLookupFactory</str>      
+      <str name="field">nameEmailView</str>
+      <str name="suggestAnalyzerFieldType">text_autocomplete</str>
+      <str name="highlight">false</str>
+    </lst>
+  </searchComponent>
+
+  <!-- autosuggest request handler -->
+  <requestHandler class="org.apache.solr.handler.component.SearchHandler" name="/suggest">
+    <lst name="defaults">
+      <str name="wt">json</str>
+      <str name="indent">true</str>
+      <str name="spellcheck">true</str>
+      <str name="spellcheck.name">AD_en</str>
+      <str name="spellcheck.count">40</str>
+      <str name="spellcheck.collate">false</str>
+      <str name="spellcheck.collateExtendedResults">false</str>
+      <str name="spellcheck.dictionary">AD_en</str> 
+      <str name="spellcheck.maxCollations">5</str>   
+    </lst>
+    <arr name="components">
+      <str>autosuggest</str>
+    </arr>
+  </requestHandler>
+  
+  <requestHandler name="/standard" class="solr.StandardRequestHandler" default="true" />
+
+  <requestHandler name="/update" class="solr.UpdateRequestHandler" />
+  
+  <requestHandler name="/replication" class="solr.ReplicationHandler" > 
+    <lst name="master">
+      <str name="enable">${solr.enable.master:false}</str>
+      <str name="replicateAfter">commit</str>
+      <str name="confFiles">schema.xml,stopwords.txt,data-config.xml</str>
+    </lst>
+    <lst name="slave">
+      <str name="enable">${solr.enable.slave:false}</str>
+      <str name="masterUrl">${solr.master.url}/AddressBook</str>
+      <str name="pollInterval">${solr.replication.poll.interval}</str>
+    </lst>
+  </requestHandler>
+  <luceneMatchVersion>5.2.1</luceneMatchVersion>
+  
+  <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+      <str name="config">data-config.xml</str>
+      <lst name="datasource">
+	    <str name="jndiName">jdbc/kanaDS</str>
+          <str name="batchSize">1000</str>
+      </lst>
+    </lst>
+  </requestHandler>
+  
+  <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
+
+   <indexConfig>
+          <!-- Maximum time to wait for a write lock (ms) for an IndexWriter. Default: 1000 -->
+          <writeLockTimeout>5000</writeLockTimeout>
+          <!-- LockFactory 
+          
+                   This option specifies which Lucene LockFactory implementation
+                   to use.
+                
+                   single = SingleInstanceLockFactory - suggested for a
+                            read-only index or when there is no possibility of
+                            another process trying to modify the index.
+                   native = NativeFSLockFactory - uses OS native file locking.
+                            Do not use when multiple solr webapps in the same
+                            JVM are attempting to share a single index.
+                   simple = SimpleFSLockFactory  - uses a plain file for locking
+          
+                   Defaults: 'native' is default for Solr3.6 and later, otherwise
+                             'simple' is the default
+          
+                   More details on the nuances of each LockFactory...
+                   http://wiki.apache.org/lucene-java/AvailableLockFactories
+              
+         <lockType>simple</lockType> -->
+         <!-- Unlock On Startup
+      
+               If true, unlock any held write or commit locks on startup.
+               This defeats the locking mechanism that allows multiple
+               processes to safely access a lucene index, and should be used
+               with care. Default is "false".
+      
+               This is not needed if lock type is 'none' or 'single'
+           -->
+       <!--
+          <unlockOnStartup>true</unlockOnStartup> -->
+      
+  </indexConfig>
+
+  <query>
+    <maxBooleanClauses>65536</maxBooleanClauses>
+  </query>
+  
+  </config>
+
