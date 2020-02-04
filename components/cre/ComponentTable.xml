@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ComponentTable [] >
+  <ComponentTable
+      isPrivate="false"
+      name="ComponentTable"
+      nested="false">
+    <CustomComponentType
+        boundObjectPath=""
+        boundObjectType="OBJECT"
+        description=""
+        hide="false"
+        initFunction="SwordCiboodle.CustomComponents.MedtronicAutoSuggestEmailField.init"
+        logicalName=""
+        name="MedtronicAutoSuggestEmailField" />
+    <CustomComponent
+        customType="MedtronicAutoSuggestEmailField"
+        depthOrder="0"
+        events="536870913"
+        movable="true"
+        name="Default_MedtronicAutoSuggestEmailField"
+        required="false"
+        resizable="true"
+        showAs=""
+        showGlassOnEvent="false">
+      <CustomComponent_loc
+          height="100"
+          hintText=""
+          mnemonic=""
+          naturalSize="false"
+          scriptText=""
+          units="PIXELS"
+          width="100"
+          xCoord="50"
+          yCoord="50">
+        <ForegroundColour />
+        <BackgroundColour />
+        <FontTagReference />
+      </CustomComponent_loc>
+      <EventDefinitionReference
+          logicalUrl="MedtronicAddressBook.Implementation.Events.EmailSelectedEvent"
+          name="EmailSelectedEvent"
+          nested="false" />
+    </CustomComponent>
+  </ComponentTable>

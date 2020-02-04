@@ -24,7 +24,7 @@
       <str name="name">AD_en</str>
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
       <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.AnalyzingInfixLookupFactory</str>      
-      <str name="field">nameEmailView</str>
+      <str name="field">emailAddress</str>
       <str name="suggestAnalyzerFieldType">text_autocomplete</str>
       <str name="highlight">false</str>
     </lst>

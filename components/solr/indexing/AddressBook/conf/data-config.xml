@@ -1,57 +1,30 @@
 <dataConfig>
     <propertyWriter dateFormat="dd-MMM-yy h.mm.ss a" type="SimplePropertiesWriter" filename="dih.properties" />    
     <document>
-        <entity name="addressBookEntry" pk="ID" transformer="com.gtnet.pk.ecmas.extensions.indexing.impl.SolrDataTransformer, TemplateTransformer"
+        <entity name="addressBookEntry" pk="ADDRESS_BOOK_ID" transformer="com.gtnet.pk.ecmas.extensions.indexing.impl.SolrDataTransformer, TemplateTransformer"
                 query="(
-select dhl_agent_address_book_entry.email_address || ' &lt;' ||dhl_agent_address_book_entry.email_address ||'&gt;' as NAME_EMAIL_VIEW,
-   dhl_agent_address_book_entry.id as id,
-   dhl_agent_address_book_entry.username as type,
-   100 as weight,
-   dhl_agent_address_book_entry.id as email_address_id,
-   dhl_agent_address_book_entry.email_address as email_address,
-   dhl_agent_address_book_entry.email_address as name,
-   dhl_agent_address_book_entry.email_address as description,
-   dhl_agent_address_book_entry.last_used
-    from dhl_agent_address_book_entry
-	)
-  UNION ALL
-(
-SELECT  LOWER(ADDRESS_BOOK_ENTRY_LOC.NAME) || ' &lt;' || CE_EMAIL_ADDRESS.EMAIL_ADDRESS ||'&gt;' AS NAME_EMAIL_VIEW,
-				       address_book_entry.id,
-     TO_NCHAR('LDAP') as type,
-     1 as weight,
-     address_book_entry.email_address_id,
-     ce_email_address.email_address,
-     TO_NCHAR( address_book_entry_loc.NAME ),
-     TO_NCHAR(address_book_entry_loc.description ),
-     null as last_used
-FROM   address_book_entry, 
-       ce_email_address, 
-
-       address_book_entry_loc 
-WHERE  address_book_entry.is_deleted='N' 
-AND    address_book_entry.address_book_id IN 
-       ( 
-              SELECT id 
-              FROM   address_book_loc 
-              WHERE  NAME IN ('DHL LDAP Address Book', 
-                              'DHL EMT Advisors')) 
-AND    ce_email_address.id=address_book_entry.email_address_id 
-AND    address_book_entry_loc.id=address_book_entry.id 
-AND    address_book_entry_loc.locale='en-GB'
+SELECT LF.TEXT AS ADDRESS_BOOK_NAME, 
+AB.ID AS ADDRESS_BOOK_ID, 
+ABE.EMAIL_ADDRESS_ID AS EMAIL_ADDRESS_ID, 
+CEA.EMAIL_ADDRESS AS EMAIL_ADDRESS FROM ADDRESS_BOOK AB
+INNER JOIN ADDRESS_BOOK_ENTRY ABE
+ON AB.ID = ABE.ADDRESS_BOOK_ID
+INNER JOIN CE_EMAIL_ADDRESS CEA
+ON CEA.ID = ABE.EMAIL_ADDRESS_ID
+INNER JOIN LOCALISED_FIELD LF
+ON AB.ID = LF.OBJECT_VERSION AND AB.UUID = LF.OBJECT_INSTANCE
+WHERE CEA.IS_DELETED = 'N'
+AND LF.OBJECT_TYPE = 'AddressBookED'
+AND LF.FIELD_NAME = 'name'
+AND LF.TEXT = 'Outlook'
 )" 
-		deltaImportQuery="SELECT ID, ADDRESS_BOOK_ID, EMAIL_ADDRESS_ID FROM ADDRESS_BOOK_ENTRY WHERE IS_DELETED='N' AND ID='${dataimporter.delta.ID}'"
-		deltaQuery="SELECT ID, ADDRESS_BOOK_ID, EMAIL_ADDRESS_ID FROM ADDRESS_BOOK_ENTRY WHERE IS_DELETED='N' AND ADDRESS_BOOK_ID IN (SELECT ID FROM ADDRESS_BOOK_LOC WHERE NAME IN ('DHL LDAP Address Book', 'DHL EMT Advisors') AND ID &gt; '${dataimporter.request.start_id}' AND ID &lt; '${dataimporter.request.stop_id}'" >
-            <field column="ID" name="id" />
-            <field column="TYPE" name="addressBookType" />
+deltaImportQuery="SELECT ID, ADDRESS_BOOK_ID, EMAIL_ADDRESS_ID FROM ADDRESS_BOOK_ENTRY WHERE IS_DELETED='N' AND ID='${dataimporter.delta.ID}'"
+deltaQuery="SELECT ID, ADDRESS_BOOK_ID, EMAIL_ADDRESS_ID FROM ADDRESS_BOOK_ENTRY WHERE IS_DELETED='N' AND ADDRESS_BOOK_ID IN (SELECT ID FROM ADDRESS_BOOK WHERE ID &gt; '${dataimporter.request.start_id}' AND ID &lt; '${dataimporter.request.stop_id}'"
+>
+            <field column="ADDRESS_BOOK_ID" name="id" />
+            <field column="ADDRESS_BOOK_NAME" name="addressBookName" />
             <field column="EMAIL_ADDRESS_ID" name="emailAddressId" />
-
-            <field column="EMAIL_ADDRESS" name="emailAddress" />
-            <field column="NAME" name="name" />
-            <field column="NAME_EMAIL_VIEW" name="nameEmailView" />              
-            <field column="LAST_USED" name="lastUsed" />           
-            <field column="WEIGHT" name="weight" />           
-                   
+            <field column="EMAIL_ADDRESS" name="emailAddress" />          
         </entity>
     </document>
 </dataConfig>
