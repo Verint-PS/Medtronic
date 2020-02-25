@@ -167,7 +167,7 @@
 
         <SecurityProvider classname="com.gtnet.common.security.DummySecurityStore"/>
         
-        <IdentityRetriever classname="com.gtnet.httpClient.security.SamlUserIdentityRetriever"/>
+        <IdentityRetriever classname="com.gtnet.httpClient.security.oauth.OIDCIdentityRetriever"/>
         
         <RequestURIConfig requestURI="/GTConnect/UnifiedAcceptor">
             <Matching>
