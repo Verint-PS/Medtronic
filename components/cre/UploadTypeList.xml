@@ -115,6 +115,21 @@
             mime="text/html" />
         <MimeType
             mime="text/csv" />
+		<MimeType
+            mime="text/xml" />	
+		<MimeType
+            mime="application/xml" />
+		<MimeType
+            mime="message/rfc822" />
+		<MimeType
+            mime="application/x-zip-compressed" />
+		<MimeType
+            mime="application/zip" />
+		<MimeType
+            mime="application/vnd.ms-outlook" />
+		<MimeType
+            mime="application/octet-stream" />			
+			
       </UploadType>
       <UploadType
           maxFileSizeInKB="131072"
