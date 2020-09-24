@@ -10,5 +10,26 @@
 			<Property name="web-server-hosts">
                 <Description>List of web server hosts which is used in the webclient response headers</Description>
             </Property>
+			<Property name="cre.logoutkillcookie.name">
+                <Description>Cookie Name for cookie killer to cleanup load balancer cookie at logout or error</Description>
+            </Property>
+			<Property name="solr.corename.addressbook">
+                <Description>solr.corename.addressbook custom code</Description>
+            </Property>
+			<Property name="addressbook.auto.suggest.min.query.length">
+                <Description>addressbook.auto.suggest.min.query.length custom code </Description>
+            </Property>	
+			<Property name="addressbook.auto.suggest.max.query.length">
+                <Description>addressbook.auto.suggest.max.query.length custom code </Description>
+            </Property>				
+			<Property name="addressbook.auto.suggest.max.displayed">
+                <Description>addressbook.auto.suggest.max.displayed custom code </Description>
+            </Property>	
+			<Property name="addressbook.auto.suggest.handler">
+                <Description>addressbook.auto.suggest.handler custom code</Description>
+            </Property>
+			<Property name="addressbook.auto.agent.limit">
+                <Description>addressbook.auto.agent.limit custom code</Description>
+            </Property>			
 	</Group>
 </PropertyDefinitions>
