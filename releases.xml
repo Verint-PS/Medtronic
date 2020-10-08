@@ -2,4 +2,5 @@
     <release value="MEDTRONIC_R1_0_0" after="Add_R5_0_0"/>
 	<release value="MEDTRONIC_R1_1_0" after="Add_R5_3_0"/>
 	<release value="MEDTRONIC_R2_0_0" after="Add_R5_7_0"/>
+	<release value="MEDTRONIC_R2_1_0" after="Add_R5_8_0"/>
 </releases>
