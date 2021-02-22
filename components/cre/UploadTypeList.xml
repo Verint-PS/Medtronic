@@ -35,6 +35,8 @@
       <UploadType
           maxFileSizeInKB="10240"
           name="uploadType">
+		<MimeType
+			mime="application/epub+zip" />		  
         <MimeType
             mime="application/word" />
         <MimeType
