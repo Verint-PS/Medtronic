@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <SecurityConfigs>
     <SecurityConfig name="BuiltInAuth" loginType="EXTERNAL">
-		<SecuredProcesses processesList="${webclient.security.secured-processes.list}"/>
+		<!--<SecuredProcesses processesList="${webclient.security.secured-processes.list}"/>-->
+		<SecuredProcesses processesList="MedtronicDesktop.Main"/>
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
@@ -44,6 +45,10 @@
 
         <SecureDownloadConfig sessionSecured="false" resourceServerHostURL="file:C:/Test/">
             <MimeHeaders>
+				<MimeType typeExtension="epub">
+                    <HttpHeader name="Content-type" value="application/epub"/>
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
                 <MimeType typeExtension="docx">
                     <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                     <HttpHeader name="Content-disposition" value="attachment" />
@@ -209,6 +214,10 @@
 
         <SecureDownloadConfig sessionSecured="false" resourceServerHostURL="file:C:/Test/">
             <MimeHeaders>
+				<MimeType typeExtension="epub">
+                    <HttpHeader name="Content-type" value="application/epub"/>
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
                 <MimeType typeExtension="docx">
                     <HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                     <HttpHeader name="Content-disposition" value="attachment" />
