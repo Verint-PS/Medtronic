@@ -76,7 +76,7 @@
     </lst>
   </requestHandler>
   
-  <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
+  <!--<requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />-->
 
    <indexConfig>
           <!-- Maximum time to wait for a write lock (ms) for an IndexWriter. Default: 1000 -->
