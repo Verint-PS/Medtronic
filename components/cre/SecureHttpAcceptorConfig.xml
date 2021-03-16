@@ -171,7 +171,7 @@
     </SecurityConfig>
 	
 	<SecurityConfig name="BuiltInAuth" loginType="FORM">
-		<SecuredProcesses processesList="MedtronicDesktop.Main,GT.Runtime.Scripts.ProcessRunner.Main"/>
+		<SecuredProcesses processesList="GT.Runtime.Scripts.ProcessRunner.Main"/>
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
