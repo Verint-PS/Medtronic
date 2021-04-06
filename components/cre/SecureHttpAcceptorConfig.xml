@@ -2,7 +2,7 @@
 <SecurityConfigs>
     <SecurityConfig name="BuiltInAuth" loginType="EXTERNAL">
 		<!--<SecuredProcesses processesList="${webclient.security.secured-processes.list}"/>-->
-		<SecuredProcesses processesList="MedtronicDesktop.Main"/>
+		<SecuredProcesses processesList="MedtronicDesktop.Main,FrameworkDesktop.Main"/>
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
