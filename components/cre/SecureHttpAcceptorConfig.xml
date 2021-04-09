@@ -2,7 +2,7 @@
 <SecurityConfigs>
     <SecurityConfig name="BuiltInAuth" loginType="EXTERNAL">
 		<!--<SecuredProcesses processesList="${webclient.security.secured-processes.list}"/>-->
-		<SecuredProcesses processesList="MedtronicDesktop.Main,FrameworkDesktop.Main"/>
+		<SecuredProcesses processesList="FrameworkDesktop.Main"/>
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
@@ -171,7 +171,7 @@
     </SecurityConfig>
 	
 	<SecurityConfig name="BuiltInAuth" loginType="FORM">
-		<SecuredProcesses processesList="GT.Runtime.Scripts.ProcessRunner.Main"/>
+		<SecuredProcesses processesList="MedtronicDesktop.Main,GT.Runtime.Scripts.ProcessRunner.Main"/>
 
         <SecurityProvider classname="com.gtnet.common.security.JDBCSecurityStore">
         </SecurityProvider>
