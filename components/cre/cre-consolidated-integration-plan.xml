@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation= "http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="file:${core.home}/config/components/reporting-event-service/cre-integration-plan-without-profiles.xml"/>
+    <import resource="file:${core.home}/config/components/cre/cre-integration-plan-without-profiles.xml"/>
+    <import resource="file:${core.home}/config/components/cre/cre-integration-plan-with-profiles.xml"/>
+</beans>
+
