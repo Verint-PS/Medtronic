@@ -165,6 +165,114 @@
                     <HttpHeader name="Content-type" value="image/pjpeg" />
                     <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
+				<MimeType typeExtension="xlsm">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.macroEnabled.12" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+				<MimeType typeExtension="xlsb">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.binary.macroEnabled.12"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="xltx">
+					<HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.spreadsheetml.template"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="oft">
+					<HttpHeader name="Content-type" value="application/oft" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="ipk">
+					<HttpHeader name="Content-type" value="application/vnd.shana.informed.package" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="ipk">
+					<HttpHeader name="Content-type" value="application/ipk" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>				
+				<MimeType typeExtension="ifm">
+					<HttpHeader name="Content-type" value="application/ifm" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/vnd.ms-outlook" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mht">
+					<HttpHeader name="Content-type" value="message/rfc822" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="pptm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-powerpoint.presentation.macroEnabled.12"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="xps">
+					<HttpHeader name="Content-type" value="application/vnd.ms-xpsdocument"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="docm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-word.document.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="htm">
+					<HttpHeader name="Content-type" value="txt/htm" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="html">
+					<HttpHeader name="Content-type" value="txt/html" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mht">
+					<HttpHeader name="Content-type" value="multipart/related" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mhtml">
+					<HttpHeader name="Content-type" value="multipart/related" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xlsb">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xlsm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="dot">
+					<HttpHeader name="Content-type" value="application/msword" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="dotx">
+					<HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.template" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vsdx">
+					<HttpHeader name="Content-type" value="application/vsdx" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vss">
+					<HttpHeader name="Content-type" value="application/vss" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vst">
+					<HttpHeader name="Content-type" value="application/vst" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xml">
+					<HttpHeader name="Content-type" value="text/xml" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/vnd.ms-outlook" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/octet-stream" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mpp">
+					<HttpHeader name="Content-type" value="application/vnd.ms-project" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
             </MimeHeaders>
             <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
         </SecureDownloadConfig>
@@ -334,6 +442,114 @@
                     <HttpHeader name="Content-type" value="image/pjpeg" />
                     <HttpHeader name="Content-disposition" value="attachment" />
                 </MimeType>
+				<MimeType typeExtension="xlsm">
+                    <HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.macroEnabled.12" />
+                    <HttpHeader name="Content-disposition" value="attachment" />
+                </MimeType>
+				<MimeType typeExtension="xlsb">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.binary.macroEnabled.12"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="xltx">
+					<HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.spreadsheetml.template"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="oft">
+					<HttpHeader name="Content-type" value="application/oft" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="ipk">
+					<HttpHeader name="Content-type" value="application/vnd.shana.informed.package" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="ipk">
+					<HttpHeader name="Content-type" value="application/ipk" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>				
+				<MimeType typeExtension="ifm">
+					<HttpHeader name="Content-type" value="application/ifm" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/vnd.ms-outlook" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mht">
+					<HttpHeader name="Content-type" value="message/rfc822" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="pptm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-powerpoint.presentation.macroEnabled.12"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="xps">
+					<HttpHeader name="Content-type" value="application/vnd.ms-xpsdocument"/>
+					<HttpHeader name="Content-disposition" value="attachment"/>
+				</MimeType>
+				<MimeType typeExtension="docm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-word.document.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="htm">
+					<HttpHeader name="Content-type" value="txt/htm" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="html">
+					<HttpHeader name="Content-type" value="txt/html" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mht">
+					<HttpHeader name="Content-type" value="multipart/related" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mhtml">
+					<HttpHeader name="Content-type" value="multipart/related" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xlsb">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xlsm">
+					<HttpHeader name="Content-type" value="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="dot">
+					<HttpHeader name="Content-type" value="application/msword" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="dotx">
+					<HttpHeader name="Content-type" value="application/vnd.openxmlformats-officedocument.wordprocessingml.template" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vsdx">
+					<HttpHeader name="Content-type" value="application/vsdx" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vss">
+					<HttpHeader name="Content-type" value="application/vss" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="vst">
+					<HttpHeader name="Content-type" value="application/vst" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="xml">
+					<HttpHeader name="Content-type" value="text/xml" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/vnd.ms-outlook" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="msg">
+					<HttpHeader name="Content-type" value="application/octet-stream" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
+				<MimeType typeExtension="mpp">
+					<HttpHeader name="Content-type" value="application/vnd.ms-project" />
+					<HttpHeader name="Content-disposition" value="attachment" />
+				</MimeType>
             </MimeHeaders>
             <AuthorisationErrorPage uri="GT_WEBUnauthorisedPage.htm" />
         </SecureDownloadConfig>

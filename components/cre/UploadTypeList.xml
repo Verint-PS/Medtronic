@@ -35,8 +35,8 @@
       <UploadType
           maxFileSizeInKB="10240"
           name="uploadType">
-		<MimeType
-			mime="application/epub+zip" />		  
+        <MimeType
+            mime="application/epub+zip" />          
         <MimeType
             mime="application/word" />
         <MimeType
@@ -117,25 +117,142 @@
             mime="text/html" />
         <MimeType
             mime="text/csv" />
+        <MimeType 
+            mime="application/vnd.ms-excel.sheet.macroEnabled.12"/>
+        <MimeType
+            mime="application/vnd.ms-word.document.macroEnabled.12" />
 		<MimeType
-            mime="text/xml" />	
-		<MimeType
-            mime="application/xml" />
-		<MimeType
-            mime="message/rfc822" />
-		<MimeType
-            mime="application/x-zip-compressed" />
-		<MimeType
-            mime="application/zip" />
+            mime="application/octet-stream" />
+        <MimeType	
+			mime="application/x-tika-msoffice" />
 		<MimeType
             mime="application/vnd.ms-outlook" />
 		<MimeType
-            mime="application/octet-stream" />		
+            mime="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />		
+        <MimeType
+            mime="application/vnd.shana.informed.package" />
+        <MimeType
+            mime="application/vnd.visio2013" />
 		<MimeType
-            mime="application/vnd.ms-excel.sheet.macroEnabled.12" />	
+            mime="application/vnd.ms-visio.drawing" />
 		<MimeType
-            mime="application/vnd.ms-excel.sheet.binary.macroenabled.12" />				
-			
+            mime="application/vsdx" />
+		<MimeType
+            mime="message/rfc822" />
+		<MimeType
+            mime="application/xml" />
+		<MimeType
+            mime="text/xml" />
+		<MimeType
+            mime="application/xlb" />
+		<MimeType
+            mime="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+		<MimeType
+            mime="application/vnd.ms-powerpoint.presentation.macroEnabled.12" />
+		<MimeType
+            mime="application/pub" />
+		<MimeType
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.template" />
+		<MimeType
+            mime="application/odc" />
+		<MimeType
+            mime="application/odp" />
+		<MimeType
+            mime="application/ods" />
+		<MimeType
+            mime="application/odt" />
+		<MimeType
+            mime="text/x-assembly" />	
+		<MimeType
+            mime="application/x-zip-compressed" />
+		<MimeType
+            mime="application/zip" />			
+      </UploadType>
+	  <UploadType
+          maxFileSizeInKB="10240"
+          name="email-outbound">
+        <MimeType
+            mime="application/epub+zip" />          
+        <MimeType
+            mime="application/word" />
+        <MimeType
+            mime="application/doc" />
+        <MimeType
+            mime="application/msword" />
+        <MimeType
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+        <MimeType
+            mime="application/vnd.oasis.opendocument.text" />
+        <MimeType
+            mime="application/excel" />
+        <MimeType
+            mime="application/vnd.ms-excel" />
+        <MimeType
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+        <MimeType
+            mime="application/x-tika-msoffice" />
+        <MimeType
+            mime="application/vnd.oasis.opendocument.spreadsheet" />
+        <MimeType
+            mime="application/vnd.ms-powerpoint" />
+        <MimeType
+            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+        <MimeType
+            mime="application/vnd.oasis.opendocument.presentation" />
+        <MimeType
+            mime="application/vnd.visio" />
+        <MimeType
+            mime="application/vnd.ms-visio.viewer" />
+        <MimeType
+            mime="application/pdf" />
+        <MimeType
+            mime="application/x-pdf" />
+        <MimeType
+            mime="application/rtf" />
+        <MimeType
+            mime="image/jpg" />
+        <MimeType
+            mime="image/jpeg" />
+        <MimeType
+            mime="image/pjpeg" />
+        <MimeType
+            mime="image/gif" />
+        <MimeType
+            mime="image/tiff" />
+        <MimeType
+            mime="image/png" />
+        <MimeType
+            mime="video/mp4" />
+        <MimeType
+            mime="video/mpeg" />
+        <MimeType
+            mime="video/avi" />
+        <MimeType
+            mime="audio/wav" />
+        <MimeType
+            mime="audio/x-wav" />
+        <MimeType
+            mime="audio/mpeg" />
+        <MimeType
+            mime="audio/mp3" />
+        <MimeType
+            mime="image/bmp" />
+        <MimeType
+            mime="image/ms-bmp" />
+        <MimeType
+            mime="image/x-ms-bmp" />
+        <MimeType
+            mime="image/x-bmp" />
+        <MimeType
+            mime="application/txt" />
+        <MimeType
+            mime="text/plain" />
+        <MimeType
+            mime="text/richtext" />
+        <MimeType
+            mime="text/html" />
+        <MimeType
+            mime="text/csv" />
       </UploadType>
       <UploadType
           maxFileSizeInKB="131072"
