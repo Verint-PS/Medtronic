@@ -253,6 +253,28 @@
             mime="text/html" />
         <MimeType
             mime="text/csv" />
+		<MimeType
+			mime="application/vnd.ms-excel.sheet.macroEnabled.12"/>
+		<MimeType
+			mime="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+		<MimeType
+			mime="application/xml" />
+		<MimeType
+			mime="text/xml" />
+		<MimeType
+			mime="application/vnd.ms-outlook" />
+		<MimeType
+			mime="application/message/rfc822" />
+		<MimeType
+			mime="message/rfc822" />
+		<MimeType
+			mime="application/octet-stream" />
+		<MimeType
+			mime="application/zip" />
+		<MimeType
+			mime="application/x-zip" />
+		<MimeType
+			mime="application/x-zip-compressed" />
       </UploadType>
       <UploadType
           maxFileSizeInKB="131072"
